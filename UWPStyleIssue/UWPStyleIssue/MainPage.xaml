@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UWPStyleIssue.MainPage">
+    <Grid VerticalOptions="Center" HorizontalOptions="Center" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+            Source=
+               "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAaTAAAAJDAyYjg0Y2FmLWM4MWEtNDBkMi05NjhjLWJiZTk3Y2JhNmE0Nw.jpg"
+           Style="{StaticResource ImageStyle}"></Image>
+        <Label Text="Welcome to                       Xamarin Forms!" Grid.Row="1" Style="{StaticResource TextStyle}"/>
+        <Label Text="Yet another line" Grid.Row="2" Style="{StaticResource OtherTextStyle}"/>
+        <Label Text="Last Line" Grid.Row="3" FontSize="{StaticResource SomeOtherTextFontSize}"/>
+    </Grid>
+</ContentPage>

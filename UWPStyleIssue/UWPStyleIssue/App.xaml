@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UWPStyleIssue.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="ImageSize" x:TypeArguments="x:Double"  >
+                <On Platform="Windows" Value="150"></On>
+                <On Platform="Android" Value="100"></On>
+                <On Platform="iOS" Value="90"></On>
+            </OnPlatform>
+           
+            <Style TargetType="Image" x:Key="ImageStyle" >
+                <Setter Property="HeightRequest" Value="{StaticResource ImageSize}" />
+                <Setter Property="WidthRequest" Value="{StaticResource ImageSize}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <OnPlatform x:Key="TextFontSize" x:TypeArguments="x:Double" >
+                <On Platform="Windows" Value="40"></On>
+                <On Platform="Android" Value="20"></On>
+                <On Platform="iOS" Value="20"></On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="TextMargin" x:TypeArguments="Thickness" >
+                <On Platform="Windows" Value="50,-75,0,0"></On>
+                <On Platform="Android" Value="0,-50,0,0"></On>
+                <On Platform="iOS" Value="0,-45,0,0"></On>
+            </OnPlatform>
+
+            <Style TargetType="Label" x:Key="TextStyle" >
+                <Setter Property="Margin" Value="{StaticResource TextMargin}"></Setter>
+                <Setter Property="FontSize" Value="{StaticResource TextFontSize}"></Setter>
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Style TargetType="Label" x:Key="OtherTextStyle" >
+                <Setter Property="FontSize">
+                    <OnPlatform x:Key="FontSize" x:TypeArguments="x:Double" >
+                        <On Platform="Windows" Value="100"></On>
+                        <On Platform="Android" Value="30"></On>
+                        <On Platform="iOS" Value="30"></On>
+                    </OnPlatform>
+                </Setter>
+            </Style>
+
+            <OnPlatform x:Key="SomeOtherTextFontSize" x:TypeArguments="x:Double" >
+                <On Platform="Windows" Value="80"></On>
+                <On Platform="Android" Value="70"></On>
+                <On Platform="iOS" Value="60"></On>
+            </OnPlatform>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>
